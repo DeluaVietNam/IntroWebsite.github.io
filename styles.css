@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Lato:wght@300;400;700&family=Open+Sans:wght@300;400;500;600&family=Poppins:wght@200;300;400;500;600;700&family=Rubik:wght@400;500;700&display=swap");
+
+:root {
+  --main-white: #f0f0f0;
+  --main-red: #be3144;
+  --main-blue: #45567d;
+  --main-gray: #303841;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "poppins", sans-serif;
+  line-height: 1.5;
+  font-size: 16px;
+  color: var(--main-white);
+
+  position: relative;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--main-white);
+}
+
+/* Navbar */
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+
+  text-align: right;
+  background-color: var(--main-red);
+  font-size: 20px;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  padding: 0 30px;
+}
+
+.nav-list a {
+  padding: 15px 30px;
+}
+
+.nav-list a:hover {
+  background-color: var(--main-blue);
+}
+
+/* Welcome Section */
+.welcome-section {
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+
+  position: relative;
+}
+
+.welcome-header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  text-align: center;
+}
+
+.welcome-header h1 {
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.welcome-header p {
+  font-style: italic;
+  font-size: 28px;
+  font-weight: 200;
+  color: var(--main-red);
+}
+
+/* Projects */
+.project-section {
+  text-align: center;
+  background-color: var(--main-blue);
+  padding: 80px 20px;
+}
+
+.project-section a {
+  background-color: var(--main-gray);
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+.projects-grid {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 50px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+}
+
+.project-img {
+  display: block;
+  height: 85%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-title {
+  font-size: 20px;
+  padding: 15px 20px;
+  margin: 0;
+}
+
+.project-section h2 {
+  max-width: 700px;
+  font-size: 44px;
+  margin: 0 auto 40px;
+  font-weight: 500;
+
+  border-bottom: 3px solid var(--main-white);
+}
+
+.project-title span {
+  color: var(--main-gray);
+}
+
+.project-section a:hover .project-title span {
+  color: darkorange;
+}
+
+.project-section .btn {
+  padding: 8px 20px;
+  font-size: 20px;
+}
+
+.project-section .btn > i {
+  margin-left: 6px;
+}
+
+.project-section .btn:hover {
+  background-color: var(--main-red);
+}
+
+.project-section .btn:hover > i {
+  transform: translateX(4px);
+  transition: transform 0.5s ease-in;
+}
+
+/* Contact Section */
+.contact-section {
+  background-color: var(--main-gray);
+  text-align: center;
+  padding: 20px 20px 80px;
+  border-bottom: 5px solid var(--main-red);
+}
+
+.contact-header {
+  margin-bottom: 50px;
+}
+
+.contact-header h2 {
+  font-size: 58px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.contact-header p {
+  font-size: 20px;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.contact-link {
+  margin: 0 auto;
+  max-width: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-link a {
+  font-size: 24px;
+  padding: 10px 20px;
+}
+
+.contact-link i {
+  margin-right: 10px;
+}
+
+.contact-link a:hover {
+  transform: translateY(10px);
+  transition: transform 0.4s ease-out;
+}
+
+/* Footer */
+footer {
+  background-color: var(--main-gray);
+  display: flex;
+  gap: 40px;
+  justify-content: space-evenly;
+  padding: 40px;
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+  /* Navbar */
+  .nav-list {
+    flex-direction: column;
+    padding: 0;
+    text-align: center;
+  }
+
+  .nav-list li {
+    align-self: stretch;
+  }
+
+  .nav-list a {
+    display: block;
+  }
+
+  /* Welcome section */
+  .welcome-header {
+    width: 100%;
+  }
+
+  /* Contact Section */
+  .contact-link {
+    flex-direction: column;
+  }
+}
